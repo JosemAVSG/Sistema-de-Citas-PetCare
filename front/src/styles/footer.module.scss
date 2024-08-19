@@ -1,0 +1,7 @@
+@import 'colores.module';
+
+.footer {
+    background-color: $Primary;
+    display: flex;
+    flex-direction: column;
+     }

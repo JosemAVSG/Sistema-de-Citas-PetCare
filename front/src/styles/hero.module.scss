@@ -1,0 +1,117 @@
+@import "colores.module";
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    background: $Secondary;
+}
+.hero{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.hero_image{
+    display: flex;
+    align-self: center;
+    margin-right: 20px;
+    
+}
+.hero_image img{
+    position: relative;
+    width: 1000px;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(162, 44, 185, 0.19), 0 6px 6px rgba(175, 66, 197, 0.23);
+    /* object-fit: cover; */
+    object-fit: fill;
+    // Animation
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+   
+}
+.hero_text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-family: 'Nerko One', cursive;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+    margin: 50px;
+    .hero_title{
+        font-size: 3rem;
+    }
+    .hero_subtitle{
+        font-size: 1.5rem;
+    }
+    .hero_paragraph{
+        font-size: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+.hero_button{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: $Primary;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    a{
+        text-decoration: none;
+        color: rgba(238, 4, 168, 0.89);
+    }
+}
+.hero_button:hover{
+    background-color: rgba(238, 4, 168, 0.89);
+    a{
+        color: $Secondary;
+    }
+}   
+
+@media screen and (min-width: 1024px) {
+    .hero_image {
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    .hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero_text{
+        width: 90%;
+    .hero_button{
+        padding: 10px;
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+    }
+    .hero_image{
+        display: flex;
+        position: relative;
+        top: calc(2% - 50px);
+        left: calc(15% - 50px);
+        width: 70%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0px, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}

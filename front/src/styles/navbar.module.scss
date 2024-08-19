@@ -1,0 +1,77 @@
+@import "colores.module";
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $Primary;
+  font-family: 'Nerko One', cursive;
+  height: 3rem;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 3rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  h1 {
+    color: $Dark;
+    font-size: 1.5rem;
+    font-family: 'Nerko One', cursive;
+  }
+  img{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+.sesion {
+  background-color: $Secondary;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  list-style-type: none;
+  &:hover {
+    background: rgba(238, 4, 168, 0.89);
+    a{
+      color: $Secondary;
+    }
+    color: $Secondary;
+  }
+  a {
+    color: rgba(238, 4, 168, 0.89);
+    font-size: 1.0rem;
+    font-weight: bold;
+  
+  }
+  color: rgba(238, 4, 168, 0.89);
+}
+
+.navegacion{
+  gap: 20px;
+  a{
+    font-size: 1.3rem;
+  }
+
+}
+
+ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: $Primary;
+ 
+  a {
+    text-decoration: none;
+    color: $Dark;
+    font-size: 1.0rem;
+    font-weight: bold;  
+  }
+}
+.btn_sesion {
+  margin: 3rem;
+}
+.btn_logout{
+  margin: 3rem;
+}

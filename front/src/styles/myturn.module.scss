@@ -1,0 +1,18 @@
+@import "colores.module";
+.button{
+    display: flex;
+    justify-content: end;
+    align-self: flex-start;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+    background-color: rgba(80, 25, 66, 0.808);
+    color: $Secondary;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.button:hover{
+    background-color:  rgba(238, 4, 168, 0.89);
+    
+}
